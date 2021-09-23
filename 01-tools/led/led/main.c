@@ -19,8 +19,12 @@
  * several arguments. Do NOT put a semicolon character at the end of 
  * directives. This is a common mistake.
  */
+/* _.. . ..___ */
 #define LED_GREEN   PB5 // AVR pin where green LED is connected
-#define SHORT_DELAY 300 // Delay in milliseconds
+#define SHORT_DELAY 350 // Delay in milliseconds
+#define LONG_DELAY 2000
+#define DOT 200
+#define DASH 1000
 #ifndef F_CPU           // Preprocessor directive allows for conditional
                         // compilation. The #ifndef means "if not defined".
 # define F_CPU 16000000 // CPU frequency in Hz required for delay
@@ -39,6 +43,30 @@
  * Purpose:  Toggle one LED and use delay library.
  * Returns:  none
  **********************************************************************/
+int dot(void)
+{
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(DOT);
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(SHORT_DELAY);
+    return 0;
+}
+
+int dash(void)
+{
+    PORTB = PORTB ^ (1<<LED_GREEN); //on
+    _delay_ms(DASH);
+    PORTB = PORTB ^ (1<<LED_GREEN);
+    _delay_ms(SHORT_DELAY);
+    return 0;
+}
+
+int l_break(void)
+{
+    _delay_ms(LONG_DELAY);
+    return 0;
+}
+
 int main(void)
 {
     // Set pin as output in Data Direction Register
@@ -52,12 +80,19 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
-        _delay_ms(SHORT_DELAY);
-
-        // Invert LED in Data Register
-        // PORTB = PORTB xor 0010 0000
-        PORTB = PORTB ^ (1<<LED_GREEN);
+        l_break();
+        dash();
+        dot();
+        dot();
+        l_break();
+        dot();
+        l_break();
+        dot();
+        dot();
+        dash();
+        dash();
+        dash();
+        l_break();
     }
 
     // Will never reach this
