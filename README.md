@@ -30,8 +30,6 @@ GitHub repository:
 1. Listing of C code with syntax highlighting which repeats one "dot" and one "comma" on a LED:
 
 ```c
-int main(void)
-{
 ...
 #define LED_GREEN   PB5 // AVR pin where green LED is connected
 #define SHORT_DELAY 350 // Delay in milliseconds, for break between dots and dashes
