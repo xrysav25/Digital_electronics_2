@@ -2,7 +2,7 @@
 
 GitHub repository:
 
-   [https://github.com/...](https://github.com/...)
+   [github.com/xrysav25](https://github.com/xrysav25/Digital_electronics_2)
 
 
 ### Blink example
