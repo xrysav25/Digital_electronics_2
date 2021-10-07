@@ -12,18 +12,18 @@ Link to your `Digital-electronics-2` GitHub repository:
 | **Data type** | **Number of bits** | **Range** | **Description** |
 | :-: | :-: | :-: | :-- | 
 | `uint8_t`  | 8 | 0, 1, ..., 255 | Unsigned 8-bit integer |
-| `int8_t`   |  |  |  |
-| `uint16_t` |  |  |  |
-| `int16_t`  |  |  |  |
+| `int8_t`   | 8 |  | Signed 8-bit integer |
+| `uint16_t` | 16 |  | unsigned 16-bit integer |
+| `int16_t`  | 16 |  | signed 16-bit integer |
 | `float`    |  | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
-| `void`     |  |  |  |
+| `void`     | 0 |  |  |
 
 
 ### GPIO library
 
 1. In your words, describe the difference between the declaration and the definition of the function in C.
-   * Function declaration
-   * Function definition
+   * Function declaration means only set names and data types for function and their imputs. It's stored in .h file
+   * Function definition means to write function body, file suffix is .c
 
 2. Part of the C code listing with syntax highlighting, which toggles LEDs only if push button is pressed. Otherwise, the value of the LEDs does not change. Use function from your GPIO library. Let the push button is connected to port D:
 
