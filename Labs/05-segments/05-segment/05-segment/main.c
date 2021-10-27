@@ -32,17 +32,21 @@ int main(void)
 
     // Configure 16-bit Timer/Counter1 for Decimal counter
     // Set the overflow prescaler to 262 ms and enable interrupt
+    TIM1_overflow_262ms();
+    TIM1_overflow_interrupt_enable();
+    TIM0_overflow_4ms();
+    TIM0_overflow_interrupt_enable();
 
 
     // Enables interrupts by setting the global interrupt mask
-
+    sei();
 
     // Infinite loop
     while (1)
     {
         /* Empty loop. All subsequent operations are performed exclusively 
          * inside interrupt service routines ISRs */
-        switch (cnt)
+        /*switch (cnt)
         {
             case 0:
                 SEG_update_shift_regs(0b00000011, 0b00100000);
@@ -76,12 +80,31 @@ int main(void)
                 break;
         }
         cnt = (cnt+1)%10;
-    }
+    }*/
 
     // Will never reach this
     return 0;
 }
-
+    
+    
+/* Interrupt service routines ----------------------------------------*/
+/**********************************************************************
+ * Function: Timer/Counter1 overflow interrupt
+ * Purpose:  Increment counter value from 00 to 59.
+ **********************************************************************/
+ uint_8 x = 0;
+ uint_8 y = 0;
+ 
+ ISR(TIMER1_OVF_vect){
+    x++; // increment units
+    for (y, y<6, y++){
+        for (x, x<10, x++){
+            
+        }
+    }    
+}   
+    
+    
 /* Interrupt service routines ----------------------------------------*/
 /**********************************************************************
  * Function: Timer/Counter1 overflow interrupt
@@ -89,6 +112,15 @@ int main(void)
  **********************************************************************/
 ISR(TIMER1_OVF_vect)
 {
-    // WRITE YOUR CODE HERE
+    static uint8_t pos = 0;
+    if (pos == 0){ 
+        SEG_update_shift_regs(x,0;
+    }
+    else{ 
+        SEG_update_shift_regs(y,1); 
+    }
 
+    pos++;
+    if (pos == 4) pos = 0;
+    
 }
