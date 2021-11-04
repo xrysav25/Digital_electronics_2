@@ -17,6 +17,32 @@
 #include "gpio.h"
 #include "segment.h"
 
+/* Variables ---------------------------------------------------------*/
+// Active-low digit 0 to 9
+uint8_t segment_value[] = {
+    // abcdefgDP
+    0b00000011, // Digit 0
+    0b10011111, // Digit 1
+    0b00100101, // Digit 2
+    0b00001101, // Digit 3
+    0b10011001, // Digit 4
+    0b01001001, // Digit 5
+    0b01000001, // Digit 6
+    0b00011111, // Digit 7
+    0b00000001, // Digit 8
+    0b00011001  // Digit 9
+};
+
+// Active-high position 0 to 3
+uint8_t segment_position[] = {
+    // p3p2p1p0....
+    0b00010000,     // Position 0
+    0b00100000,     // Position 1
+    0b01000000,     // Position 2
+    0b10000000      // Position 3
+};
+
+
 /* Function definitions ----------------------------------------------*/
 /**********************************************************************
  * Function: SEG_init()
@@ -35,7 +61,7 @@ void SEG_init(void)
  * Function: SEG_update_shift_regs()
  * Purpose:  Display segments at one position of the SSD.
  * Input:    segments - Segments to be displayed (abcdefgDP, active low) - 8bit digit
- *           position - Position of the display where the segments are to - 1000 -> p3 aktivnÌ
+ *           position - Position of the display where the segments are to - 1000 -> p3 aktivn√≠
  *                      be displayed (p3 p2 p1 p0 xxxx, active high)
  * Returns:  none
  **********************************************************************/
@@ -103,7 +129,10 @@ void SEG_update_shift_regs(uint8_t segments, uint8_t position)
 /**********************************************************************
  * Function: SEG_clear()
  **********************************************************************/
-
+void SEG_clear()
+{
+    SEG_update_shift_regs(0b11111111,0b00000000);
+}
 /**********************************************************************
  * Function: SEG_clk_2us()
  **********************************************************************/
