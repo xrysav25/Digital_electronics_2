@@ -3,554 +3,374 @@
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000334  2**0
+  0 .data         00000000  00800100  00800100  0000023a  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000002e0  00000000  00000000  00000054  2**1
+  1 .text         000001e6  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000334  2**0
+  2 .comment      00000030  00000000  00000000  0000023a  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000364  2**2
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000026c  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 000000a0  00000000  00000000  000003a4  2**0
+  4 .debug_aranges 000000a0  00000000  00000000  000002ac  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000e32  00000000  00000000  00000444  2**0
+  5 .debug_info   00000d28  00000000  00000000  0000034c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000819  00000000  00000000  00001276  2**0
+  6 .debug_abbrev 0000080c  00000000  00000000  00001074  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000559  00000000  00000000  00001a8f  2**0
+  7 .debug_line   000004c3  00000000  00000000  00001880  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000108  00000000  00000000  00001fe8  2**2
+  8 .debug_frame  00000108  00000000  00000000  00001d44  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000491  00000000  00000000  000020f0  2**0
+  9 .debug_str    00000491  00000000  00000000  00001e4c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000380  00000000  00000000  00002581  2**0
+ 10 .debug_loc    00000330  00000000  00000000  000022dd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000070  00000000  00000000  00002901  2**0
+ 11 .debug_ranges 00000070  00000000  00000000  0000260d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-   0:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__ctors_end>
-   4:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-   8:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-   c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  10:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  14:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  18:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  1c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  20:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  24:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  28:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  2c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  30:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  34:	0c 94 36 01 	jmp	0x26c	; 0x26c <__vector_13>
-  38:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  3c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  40:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  44:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  48:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  4c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  50:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  54:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  58:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  5c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  60:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  64:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  68:	fe 00       	.word	0x00fe	; ????
-  6a:	03 01       	movw	r0, r6
-  6c:	08 01       	movw	r0, r16
-  6e:	0d 01       	movw	r0, r26
-  70:	12 01       	movw	r2, r4
-  72:	17 01       	movw	r2, r14
-  74:	1c 01       	movw	r2, r24
-  76:	21 01       	movw	r4, r2
-  78:	26 01       	movw	r4, r12
-  7a:	2b 01       	movw	r4, r22
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 e7 00 	jmp	0x1ce	; 0x1ce <__vector_13>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
 
-0000007c <__ctors_end>:
-  7c:	11 24       	eor	r1, r1
-  7e:	1f be       	out	0x3f, r1	; 63
-  80:	cf ef       	ldi	r28, 0xFF	; 255
-  82:	d8 e0       	ldi	r29, 0x08	; 8
-  84:	de bf       	out	0x3e, r29	; 62
-  86:	cd bf       	out	0x3d, r28	; 61
-  88:	0e 94 ea 00 	call	0x1d4	; 0x1d4 <main>
-  8c:	0c 94 6e 01 	jmp	0x2dc	; 0x2dc <_exit>
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 e0 00 	call	0x1c0	; 0x1c0 <main>
+  78:	0c 94 f1 00 	jmp	0x1e2	; 0x1e2 <_exit>
 
-00000090 <__bad_interrupt>:
-  90:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000094 <GPIO_config_output>:
+00000080 <GPIO_config_output>:
  **********************************************************************/
 void GPIO_config_input_pullup(volatile uint8_t *reg_name, uint8_t pin_num)
 {
     *reg_name = *reg_name & ~(1<<pin_num);  // Data Direction Register
     reg_name++;                     // Change pointer to Data Register
     *reg_name = *reg_name | (1<<pin_num);   // Data Register
-  94:	fc 01       	movw	r30, r24
-  96:	40 81       	ld	r20, Z
-  98:	21 e0       	ldi	r18, 0x01	; 1
-  9a:	30 e0       	ldi	r19, 0x00	; 0
-  9c:	02 c0       	rjmp	.+4      	; 0xa2 <GPIO_config_output+0xe>
-  9e:	22 0f       	add	r18, r18
-  a0:	33 1f       	adc	r19, r19
-  a2:	6a 95       	dec	r22
-  a4:	e2 f7       	brpl	.-8      	; 0x9e <GPIO_config_output+0xa>
-  a6:	24 2b       	or	r18, r20
-  a8:	20 83       	st	Z, r18
-  aa:	08 95       	ret
+  80:	fc 01       	movw	r30, r24
+  82:	40 81       	ld	r20, Z
+  84:	21 e0       	ldi	r18, 0x01	; 1
+  86:	30 e0       	ldi	r19, 0x00	; 0
+  88:	02 c0       	rjmp	.+4      	; 0x8e <GPIO_config_output+0xe>
+  8a:	22 0f       	add	r18, r18
+  8c:	33 1f       	adc	r19, r19
+  8e:	6a 95       	dec	r22
+  90:	e2 f7       	brpl	.-8      	; 0x8a <GPIO_config_output+0xa>
+  92:	24 2b       	or	r18, r20
+  94:	20 83       	st	Z, r18
+  96:	08 95       	ret
 
-000000ac <GPIO_write_low>:
+00000098 <GPIO_write_low>:
  * Input:    reg_name - Address of Port Register, such as &PORTB
  *           pin_num - Pin designation in the interval 0 to 7
  * Returns:  none
  **********************************************************************/
 void GPIO_write_low(volatile uint8_t *reg_name, uint8_t pin_num)
 {
-  ac:	fc 01       	movw	r30, r24
+  98:	fc 01       	movw	r30, r24
     *reg_name = *reg_name & ~(1<<pin_num);
-  ae:	90 81       	ld	r25, Z
-  b0:	21 e0       	ldi	r18, 0x01	; 1
-  b2:	30 e0       	ldi	r19, 0x00	; 0
-  b4:	02 c0       	rjmp	.+4      	; 0xba <GPIO_write_low+0xe>
-  b6:	22 0f       	add	r18, r18
-  b8:	33 1f       	adc	r19, r19
-  ba:	6a 95       	dec	r22
-  bc:	e2 f7       	brpl	.-8      	; 0xb6 <GPIO_write_low+0xa>
-  be:	20 95       	com	r18
-  c0:	29 23       	and	r18, r25
-  c2:	20 83       	st	Z, r18
-  c4:	08 95       	ret
+  9a:	90 81       	ld	r25, Z
+  9c:	21 e0       	ldi	r18, 0x01	; 1
+  9e:	30 e0       	ldi	r19, 0x00	; 0
+  a0:	02 c0       	rjmp	.+4      	; 0xa6 <GPIO_write_low+0xe>
+  a2:	22 0f       	add	r18, r18
+  a4:	33 1f       	adc	r19, r19
+  a6:	6a 95       	dec	r22
+  a8:	e2 f7       	brpl	.-8      	; 0xa2 <GPIO_write_low+0xa>
+  aa:	20 95       	com	r18
+  ac:	29 23       	and	r18, r25
+  ae:	20 83       	st	Z, r18
+  b0:	08 95       	ret
 
-000000c6 <GPIO_write_high>:
+000000b2 <GPIO_write_high>:
 /**********************************************************************
  * Function: GPIO_write_high()
  **********************************************************************/
 void GPIO_write_high(volatile uint8_t *reg_name, uint8_t pin_num)
 {
     *reg_name = *reg_name | (1<<pin_num);
-  c6:	fc 01       	movw	r30, r24
-  c8:	40 81       	ld	r20, Z
-  ca:	21 e0       	ldi	r18, 0x01	; 1
-  cc:	30 e0       	ldi	r19, 0x00	; 0
-  ce:	02 c0       	rjmp	.+4      	; 0xd4 <GPIO_write_high+0xe>
-  d0:	22 0f       	add	r18, r18
-  d2:	33 1f       	adc	r19, r19
-  d4:	6a 95       	dec	r22
-  d6:	e2 f7       	brpl	.-8      	; 0xd0 <GPIO_write_high+0xa>
-  d8:	24 2b       	or	r18, r20
-  da:	20 83       	st	Z, r18
-  dc:	08 95       	ret
+  b2:	fc 01       	movw	r30, r24
+  b4:	40 81       	ld	r20, Z
+  b6:	21 e0       	ldi	r18, 0x01	; 1
+  b8:	30 e0       	ldi	r19, 0x00	; 0
+  ba:	02 c0       	rjmp	.+4      	; 0xc0 <GPIO_write_high+0xe>
+  bc:	22 0f       	add	r18, r18
+  be:	33 1f       	adc	r19, r19
+  c0:	6a 95       	dec	r22
+  c2:	e2 f7       	brpl	.-8      	; 0xbc <GPIO_write_high+0xa>
+  c4:	24 2b       	or	r18, r20
+  c6:	20 83       	st	Z, r18
+  c8:	08 95       	ret
 
-000000de <SEG_init>:
+000000ca <SEG_init>:
  * Returns:  none
  **********************************************************************/
 void SEG_init(void)
 {
     /* Configuration of SSD signals */
     GPIO_config_output(&DDRD, SEG_LATCH);
-  de:	64 e0       	ldi	r22, 0x04	; 4
-  e0:	8a e2       	ldi	r24, 0x2A	; 42
-  e2:	90 e0       	ldi	r25, 0x00	; 0
-  e4:	0e 94 4a 00 	call	0x94	; 0x94 <GPIO_config_output>
+  ca:	64 e0       	ldi	r22, 0x04	; 4
+  cc:	8a e2       	ldi	r24, 0x2A	; 42
+  ce:	90 e0       	ldi	r25, 0x00	; 0
+  d0:	0e 94 40 00 	call	0x80	; 0x80 <GPIO_config_output>
     GPIO_config_output(&DDRD, SEG_CLK);
-  e8:	67 e0       	ldi	r22, 0x07	; 7
-  ea:	8a e2       	ldi	r24, 0x2A	; 42
-  ec:	90 e0       	ldi	r25, 0x00	; 0
-  ee:	0e 94 4a 00 	call	0x94	; 0x94 <GPIO_config_output>
+  d4:	67 e0       	ldi	r22, 0x07	; 7
+  d6:	8a e2       	ldi	r24, 0x2A	; 42
+  d8:	90 e0       	ldi	r25, 0x00	; 0
+  da:	0e 94 40 00 	call	0x80	; 0x80 <GPIO_config_output>
     GPIO_config_output(&DDRB, SEG_DATA);
-  f2:	60 e0       	ldi	r22, 0x00	; 0
-  f4:	84 e2       	ldi	r24, 0x24	; 36
-  f6:	90 e0       	ldi	r25, 0x00	; 0
-  f8:	0e 94 4a 00 	call	0x94	; 0x94 <GPIO_config_output>
-  fc:	08 95       	ret
+  de:	60 e0       	ldi	r22, 0x00	; 0
+  e0:	84 e2       	ldi	r24, 0x24	; 36
+  e2:	90 e0       	ldi	r25, 0x00	; 0
+  e4:	0e 94 40 00 	call	0x80	; 0x80 <GPIO_config_output>
+  e8:	08 95       	ret
 
-000000fe <SEG_update_shift_regs>:
+000000ea <SEG_update_shift_regs>:
  *           position - Position of the display where the segments are to - 1000 -> p3 aktivní
  *                      be displayed (p3 p2 p1 p0 xxxx, active high)
  * Returns:  none
  **********************************************************************/
 void SEG_update_shift_regs(uint8_t segments, uint8_t position)
 {
-  fe:	1f 93       	push	r17
- 100:	cf 93       	push	r28
- 102:	df 93       	push	r29
- 104:	18 2f       	mov	r17, r24
- 106:	d6 2f       	mov	r29, r22
+  ea:	1f 93       	push	r17
+  ec:	cf 93       	push	r28
+  ee:	df 93       	push	r29
+  f0:	18 2f       	mov	r17, r24
+  f2:	d6 2f       	mov	r29, r22
     uint8_t bit_number;
 
     // Pull LATCH, CLK, and DATA low
     GPIO_write_low(&PORTD, SEG_LATCH);
- 108:	64 e0       	ldi	r22, 0x04	; 4
- 10a:	8b e2       	ldi	r24, 0x2B	; 43
- 10c:	90 e0       	ldi	r25, 0x00	; 0
- 10e:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
+  f4:	64 e0       	ldi	r22, 0x04	; 4
+  f6:	8b e2       	ldi	r24, 0x2B	; 43
+  f8:	90 e0       	ldi	r25, 0x00	; 0
+  fa:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
     GPIO_write_low(&PORTD, SEG_CLK);
- 112:	67 e0       	ldi	r22, 0x07	; 7
- 114:	8b e2       	ldi	r24, 0x2B	; 43
- 116:	90 e0       	ldi	r25, 0x00	; 0
- 118:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
+  fe:	67 e0       	ldi	r22, 0x07	; 7
+ 100:	8b e2       	ldi	r24, 0x2B	; 43
+ 102:	90 e0       	ldi	r25, 0x00	; 0
+ 104:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
     GPIO_write_low(&PORTB, SEG_DATA);
- 11c:	60 e0       	ldi	r22, 0x00	; 0
- 11e:	85 e2       	ldi	r24, 0x25	; 37
- 120:	90 e0       	ldi	r25, 0x00	; 0
- 122:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
+ 108:	60 e0       	ldi	r22, 0x00	; 0
+ 10a:	85 e2       	ldi	r24, 0x25	; 37
+ 10c:	90 e0       	ldi	r25, 0x00	; 0
+ 10e:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 126:	85 e0       	ldi	r24, 0x05	; 5
- 128:	8a 95       	dec	r24
- 12a:	f1 f7       	brne	.-4      	; 0x128 <SEG_update_shift_regs+0x2a>
- 12c:	00 00       	nop
- 12e:	c8 e0       	ldi	r28, 0x08	; 8
+ 112:	85 e0       	ldi	r24, 0x05	; 5
+ 114:	8a 95       	dec	r24
+ 116:	f1 f7       	brne	.-4      	; 0x114 <SEG_update_shift_regs+0x2a>
+ 118:	00 00       	nop
+ 11a:	c8 e0       	ldi	r28, 0x08	; 8
     for (bit_number = 0; bit_number < 8; bit_number++)
     {
         // Test LSB of "segments" by & (faster) or % (slower) and... 
         // ...output DATA value
        
         if ((segments & 1) == 1)
- 130:	10 ff       	sbrs	r17, 0
- 132:	06 c0       	rjmp	.+12     	; 0x140 <SEG_update_shift_regs+0x42>
+ 11c:	10 ff       	sbrs	r17, 0
+ 11e:	06 c0       	rjmp	.+12     	; 0x12c <SEG_update_shift_regs+0x42>
         {GPIO_write_high(&PORTB, SEG_DATA);}
- 134:	60 e0       	ldi	r22, 0x00	; 0
- 136:	85 e2       	ldi	r24, 0x25	; 37
- 138:	90 e0       	ldi	r25, 0x00	; 0
- 13a:	0e 94 63 00 	call	0xc6	; 0xc6 <GPIO_write_high>
- 13e:	05 c0       	rjmp	.+10     	; 0x14a <SEG_update_shift_regs+0x4c>
+ 120:	60 e0       	ldi	r22, 0x00	; 0
+ 122:	85 e2       	ldi	r24, 0x25	; 37
+ 124:	90 e0       	ldi	r25, 0x00	; 0
+ 126:	0e 94 59 00 	call	0xb2	; 0xb2 <GPIO_write_high>
+ 12a:	05 c0       	rjmp	.+10     	; 0x136 <SEG_update_shift_regs+0x4c>
         else
         {GPIO_write_low(&PORTB, SEG_DATA);}
- 140:	60 e0       	ldi	r22, 0x00	; 0
- 142:	85 e2       	ldi	r24, 0x25	; 37
- 144:	90 e0       	ldi	r25, 0x00	; 0
- 146:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
- 14a:	85 e0       	ldi	r24, 0x05	; 5
- 14c:	8a 95       	dec	r24
- 14e:	f1 f7       	brne	.-4      	; 0x14c <SEG_update_shift_regs+0x4e>
- 150:	00 00       	nop
+ 12c:	60 e0       	ldi	r22, 0x00	; 0
+ 12e:	85 e2       	ldi	r24, 0x25	; 37
+ 130:	90 e0       	ldi	r25, 0x00	; 0
+ 132:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
+ 136:	85 e0       	ldi	r24, 0x05	; 5
+ 138:	8a 95       	dec	r24
+ 13a:	f1 f7       	brne	.-4      	; 0x138 <SEG_update_shift_regs+0x4e>
+ 13c:	00 00       	nop
         // Wait 1 us
         _delay_us(1);
         // Pull CLK high
         GPIO_write_high(&PORTD, SEG_CLK);
- 152:	67 e0       	ldi	r22, 0x07	; 7
- 154:	8b e2       	ldi	r24, 0x2B	; 43
- 156:	90 e0       	ldi	r25, 0x00	; 0
- 158:	0e 94 63 00 	call	0xc6	; 0xc6 <GPIO_write_high>
- 15c:	85 e0       	ldi	r24, 0x05	; 5
- 15e:	8a 95       	dec	r24
- 160:	f1 f7       	brne	.-4      	; 0x15e <SEG_update_shift_regs+0x60>
- 162:	00 00       	nop
+ 13e:	67 e0       	ldi	r22, 0x07	; 7
+ 140:	8b e2       	ldi	r24, 0x2B	; 43
+ 142:	90 e0       	ldi	r25, 0x00	; 0
+ 144:	0e 94 59 00 	call	0xb2	; 0xb2 <GPIO_write_high>
+ 148:	85 e0       	ldi	r24, 0x05	; 5
+ 14a:	8a 95       	dec	r24
+ 14c:	f1 f7       	brne	.-4      	; 0x14a <SEG_update_shift_regs+0x60>
+ 14e:	00 00       	nop
         // Wait 1 us
         _delay_us(1);
         // Pull CLK low
         GPIO_write_low(&PORTD, SEG_CLK);
- 164:	67 e0       	ldi	r22, 0x07	; 7
- 166:	8b e2       	ldi	r24, 0x2B	; 43
- 168:	90 e0       	ldi	r25, 0x00	; 0
- 16a:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
+ 150:	67 e0       	ldi	r22, 0x07	; 7
+ 152:	8b e2       	ldi	r24, 0x2B	; 43
+ 154:	90 e0       	ldi	r25, 0x00	; 0
+ 156:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
         // Shift "segments"
         segments = segments >> 1; //shifting register
- 16e:	16 95       	lsr	r17
- 170:	c1 50       	subi	r28, 0x01	; 1
+ 15a:	16 95       	lsr	r17
+ 15c:	c1 50       	subi	r28, 0x01	; 1
     GPIO_write_low(&PORTB, SEG_DATA);
     // Wait 1 us
     _delay_us(1);
     // Loop through the 1st byte (segments)
     // a b c d e f g DP (active low values)
     for (bit_number = 0; bit_number < 8; bit_number++)
- 172:	f1 f6       	brne	.-68     	; 0x130 <SEG_update_shift_regs+0x32>
- 174:	c8 e0       	ldi	r28, 0x08	; 8
+ 15e:	f1 f6       	brne	.-68     	; 0x11c <SEG_update_shift_regs+0x32>
+ 160:	c8 e0       	ldi	r28, 0x08	; 8
     // p3 p2 p1 p0 . . . . (active high values)
     for (bit_number = 0; bit_number < 8; bit_number++)
     {
         // Test LSB of "position" by & (faster) or % (slower) and... 
         // ...output DATA value
         if ((position & 1) == 1)
- 176:	d0 ff       	sbrs	r29, 0
- 178:	06 c0       	rjmp	.+12     	; 0x186 <SEG_update_shift_regs+0x88>
+ 162:	d0 ff       	sbrs	r29, 0
+ 164:	06 c0       	rjmp	.+12     	; 0x172 <SEG_update_shift_regs+0x88>
         {GPIO_write_high(&PORTB, SEG_DATA);}
- 17a:	60 e0       	ldi	r22, 0x00	; 0
- 17c:	85 e2       	ldi	r24, 0x25	; 37
- 17e:	90 e0       	ldi	r25, 0x00	; 0
- 180:	0e 94 63 00 	call	0xc6	; 0xc6 <GPIO_write_high>
- 184:	05 c0       	rjmp	.+10     	; 0x190 <SEG_update_shift_regs+0x92>
+ 166:	60 e0       	ldi	r22, 0x00	; 0
+ 168:	85 e2       	ldi	r24, 0x25	; 37
+ 16a:	90 e0       	ldi	r25, 0x00	; 0
+ 16c:	0e 94 59 00 	call	0xb2	; 0xb2 <GPIO_write_high>
+ 170:	05 c0       	rjmp	.+10     	; 0x17c <SEG_update_shift_regs+0x92>
         else
         {GPIO_write_low(&PORTB, SEG_DATA);}
- 186:	60 e0       	ldi	r22, 0x00	; 0
- 188:	85 e2       	ldi	r24, 0x25	; 37
- 18a:	90 e0       	ldi	r25, 0x00	; 0
- 18c:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
- 190:	85 e0       	ldi	r24, 0x05	; 5
- 192:	8a 95       	dec	r24
- 194:	f1 f7       	brne	.-4      	; 0x192 <SEG_update_shift_regs+0x94>
- 196:	00 00       	nop
+ 172:	60 e0       	ldi	r22, 0x00	; 0
+ 174:	85 e2       	ldi	r24, 0x25	; 37
+ 176:	90 e0       	ldi	r25, 0x00	; 0
+ 178:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
+ 17c:	85 e0       	ldi	r24, 0x05	; 5
+ 17e:	8a 95       	dec	r24
+ 180:	f1 f7       	brne	.-4      	; 0x17e <SEG_update_shift_regs+0x94>
+ 182:	00 00       	nop
         // Wait 1 us
         _delay_us(1);
         // Pull CLK high
         GPIO_write_high(&PORTD, SEG_CLK);
- 198:	67 e0       	ldi	r22, 0x07	; 7
- 19a:	8b e2       	ldi	r24, 0x2B	; 43
- 19c:	90 e0       	ldi	r25, 0x00	; 0
- 19e:	0e 94 63 00 	call	0xc6	; 0xc6 <GPIO_write_high>
- 1a2:	85 e0       	ldi	r24, 0x05	; 5
- 1a4:	8a 95       	dec	r24
- 1a6:	f1 f7       	brne	.-4      	; 0x1a4 <SEG_update_shift_regs+0xa6>
- 1a8:	00 00       	nop
+ 184:	67 e0       	ldi	r22, 0x07	; 7
+ 186:	8b e2       	ldi	r24, 0x2B	; 43
+ 188:	90 e0       	ldi	r25, 0x00	; 0
+ 18a:	0e 94 59 00 	call	0xb2	; 0xb2 <GPIO_write_high>
+ 18e:	85 e0       	ldi	r24, 0x05	; 5
+ 190:	8a 95       	dec	r24
+ 192:	f1 f7       	brne	.-4      	; 0x190 <SEG_update_shift_regs+0xa6>
+ 194:	00 00       	nop
         // Wait 1 us
         _delay_us(1);
         // Pull CLK low
         GPIO_write_low(&PORTD, SEG_CLK);
- 1aa:	67 e0       	ldi	r22, 0x07	; 7
- 1ac:	8b e2       	ldi	r24, 0x2B	; 43
- 1ae:	90 e0       	ldi	r25, 0x00	; 0
- 1b0:	0e 94 56 00 	call	0xac	; 0xac <GPIO_write_low>
+ 196:	67 e0       	ldi	r22, 0x07	; 7
+ 198:	8b e2       	ldi	r24, 0x2B	; 43
+ 19a:	90 e0       	ldi	r25, 0x00	; 0
+ 19c:	0e 94 4c 00 	call	0x98	; 0x98 <GPIO_write_low>
         // Shift "position"
         position = position >> 1;       
- 1b4:	d6 95       	lsr	r29
- 1b6:	c1 50       	subi	r28, 0x01	; 1
+ 1a0:	d6 95       	lsr	r29
+ 1a2:	c1 50       	subi	r28, 0x01	; 1
         segments = segments >> 1; //shifting register
     }
 
     // Loop through the 2nd byte (position)
     // p3 p2 p1 p0 . . . . (active high values)
     for (bit_number = 0; bit_number < 8; bit_number++)
- 1b8:	f1 f6       	brne	.-68     	; 0x176 <SEG_update_shift_regs+0x78>
+ 1a4:	f1 f6       	brne	.-68     	; 0x162 <SEG_update_shift_regs+0x78>
         // Shift "position"
         position = position >> 1;       
     }
 
     // Pull LATCH high
     GPIO_write_high(&PORTD, SEG_LATCH);
- 1ba:	64 e0       	ldi	r22, 0x04	; 4
- 1bc:	8b e2       	ldi	r24, 0x2B	; 43
- 1be:	90 e0       	ldi	r25, 0x00	; 0
- 1c0:	0e 94 63 00 	call	0xc6	; 0xc6 <GPIO_write_high>
- 1c4:	85 e0       	ldi	r24, 0x05	; 5
- 1c6:	8a 95       	dec	r24
- 1c8:	f1 f7       	brne	.-4      	; 0x1c6 <SEG_update_shift_regs+0xc8>
- 1ca:	00 00       	nop
+ 1a6:	64 e0       	ldi	r22, 0x04	; 4
+ 1a8:	8b e2       	ldi	r24, 0x2B	; 43
+ 1aa:	90 e0       	ldi	r25, 0x00	; 0
+ 1ac:	0e 94 59 00 	call	0xb2	; 0xb2 <GPIO_write_high>
+ 1b0:	85 e0       	ldi	r24, 0x05	; 5
+ 1b2:	8a 95       	dec	r24
+ 1b4:	f1 f7       	brne	.-4      	; 0x1b2 <SEG_update_shift_regs+0xc8>
+ 1b6:	00 00       	nop
     // Wait 1 us
     _delay_us(1);
 }
- 1cc:	df 91       	pop	r29
- 1ce:	cf 91       	pop	r28
- 1d0:	1f 91       	pop	r17
- 1d2:	08 95       	ret
+ 1b8:	df 91       	pop	r29
+ 1ba:	cf 91       	pop	r28
+ 1bc:	1f 91       	pop	r17
+ 1be:	08 95       	ret
 
-000001d4 <main>:
+000001c0 <main>:
  * Returns:  none
  **********************************************************************/
 int main(void)
 {
     // Configure SSD signals
     SEG_init();
- 1d4:	0e 94 6f 00 	call	0xde	; 0xde <SEG_init>
-    int cnt = 0;
-    // Test of SSD: display number '3' at position 0
-    SEG_update_shift_regs(0b00001101, 0b00100000);
- 1d8:	60 e2       	ldi	r22, 0x20	; 32
- 1da:	8d e0       	ldi	r24, 0x0D	; 13
- 1dc:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
- **********************************************************************/
-int main(void)
-{
-    // Configure SSD signals
-    SEG_init();
-    int cnt = 0;
- 1e0:	c0 e0       	ldi	r28, 0x00	; 0
- 1e2:	d0 e0       	ldi	r29, 0x00	; 0
-            case 9:
-                SEG_update_shift_regs(0b00011001, 0b00100000);
-                break;
-        }
-        
-        cnt = (cnt+1)%10;
- 1e4:	0a e0       	ldi	r16, 0x0A	; 10
- 1e6:	10 e0       	ldi	r17, 0x00	; 0
+ 1c0:	0e 94 65 00 	call	0xca	; 0xca <SEG_init>
+        break;
+        case 4:
+        SEG_update_shift_regs(0b10011001, 0b00100000);
+        break;
+        case 5:
+        SEG_update_shift_regs(0b01001001, 0b00100000);
+ 1c4:	60 e2       	ldi	r22, 0x20	; 32
+ 1c6:	89 e4       	ldi	r24, 0x49	; 73
+ 1c8:	0e 94 75 00 	call	0xea	; 0xea <SEG_update_shift_regs>
+ 1cc:	ff cf       	rjmp	.-2      	; 0x1cc <main+0xc>
 
-
-    // Infinite loop
-    while (1)
-    {
-        SEG_init();
- 1e8:	0e 94 6f 00 	call	0xde	; 0xde <SEG_init>
-        /* Empty loop. All subsequent operations are performed exclusively 
-         * inside interrupt service routines ISRs */
-        switch (cnt)
- 1ec:	ca 30       	cpi	r28, 0x0A	; 10
- 1ee:	d1 05       	cpc	r29, r1
- 1f0:	b0 f5       	brcc	.+108    	; 0x25e <main+0x8a>
- 1f2:	fe 01       	movw	r30, r28
- 1f4:	ec 5c       	subi	r30, 0xCC	; 204
- 1f6:	ff 4f       	sbci	r31, 0xFF	; 255
- 1f8:	0c 94 54 01 	jmp	0x2a8	; 0x2a8 <__tablejump2__>
-        {
-            case 0:
-                SEG_update_shift_regs(0b00000011, 0b00100000);
- 1fc:	60 e2       	ldi	r22, 0x20	; 32
- 1fe:	83 e0       	ldi	r24, 0x03	; 3
- 200:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 204:	2c c0       	rjmp	.+88     	; 0x25e <main+0x8a>
-            case 1:
-                SEG_update_shift_regs(0b10011111, 0b00100000);
- 206:	60 e2       	ldi	r22, 0x20	; 32
- 208:	8f e9       	ldi	r24, 0x9F	; 159
- 20a:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 20e:	27 c0       	rjmp	.+78     	; 0x25e <main+0x8a>
-            case 2:
-                SEG_update_shift_regs(0b00100101, 0b00100000);
- 210:	60 e2       	ldi	r22, 0x20	; 32
- 212:	85 e2       	ldi	r24, 0x25	; 37
- 214:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 218:	22 c0       	rjmp	.+68     	; 0x25e <main+0x8a>
-            case 3:
-                SEG_update_shift_regs(0b00001101, 0b00100000);
- 21a:	60 e2       	ldi	r22, 0x20	; 32
- 21c:	8d e0       	ldi	r24, 0x0D	; 13
- 21e:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 222:	1d c0       	rjmp	.+58     	; 0x25e <main+0x8a>
-            case 4:
-                SEG_update_shift_regs(0b10011001, 0b00100000);
- 224:	60 e2       	ldi	r22, 0x20	; 32
- 226:	89 e9       	ldi	r24, 0x99	; 153
- 228:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 22c:	18 c0       	rjmp	.+48     	; 0x25e <main+0x8a>
-            case 5:
-                SEG_update_shift_regs(0b01001001, 0b00100000);
- 22e:	60 e2       	ldi	r22, 0x20	; 32
- 230:	89 e4       	ldi	r24, 0x49	; 73
- 232:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 236:	13 c0       	rjmp	.+38     	; 0x25e <main+0x8a>
-            case 6:
-                SEG_update_shift_regs(0b01000001, 0b00100000);
- 238:	60 e2       	ldi	r22, 0x20	; 32
- 23a:	81 e4       	ldi	r24, 0x41	; 65
- 23c:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 240:	0e c0       	rjmp	.+28     	; 0x25e <main+0x8a>
-            case 7:
-                SEG_update_shift_regs(0b00011111, 0b00100000);
- 242:	60 e2       	ldi	r22, 0x20	; 32
- 244:	8f e1       	ldi	r24, 0x1F	; 31
- 246:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 24a:	09 c0       	rjmp	.+18     	; 0x25e <main+0x8a>
-            case 8:
-                SEG_update_shift_regs(0b00000001, 0b00100000);
- 24c:	60 e2       	ldi	r22, 0x20	; 32
- 24e:	81 e0       	ldi	r24, 0x01	; 1
- 250:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
- 254:	04 c0       	rjmp	.+8      	; 0x25e <main+0x8a>
-            case 9:
-                SEG_update_shift_regs(0b00011001, 0b00100000);
- 256:	60 e2       	ldi	r22, 0x20	; 32
- 258:	89 e1       	ldi	r24, 0x19	; 25
- 25a:	0e 94 7f 00 	call	0xfe	; 0xfe <SEG_update_shift_regs>
-                break;
-        }
-        
-        cnt = (cnt+1)%10;
- 25e:	ce 01       	movw	r24, r28
- 260:	01 96       	adiw	r24, 0x01	; 1
- 262:	b8 01       	movw	r22, r16
- 264:	0e 94 40 01 	call	0x280	; 0x280 <__divmodhi4>
- 268:	ec 01       	movw	r28, r24
-    }
- 26a:	be cf       	rjmp	.-132    	; 0x1e8 <main+0x14>
-
-0000026c <__vector_13>:
+000001ce <__vector_13>:
 /**********************************************************************
  * Function: Timer/Counter1 overflow interrupt
  * Purpose:  Increment decimal counter value and display it on SSD.
  **********************************************************************/
 ISR(TIMER1_OVF_vect)
 {
- 26c:	1f 92       	push	r1
- 26e:	0f 92       	push	r0
- 270:	0f b6       	in	r0, 0x3f	; 63
- 272:	0f 92       	push	r0
- 274:	11 24       	eor	r1, r1
+ 1ce:	1f 92       	push	r1
+ 1d0:	0f 92       	push	r0
+ 1d2:	0f b6       	in	r0, 0x3f	; 63
+ 1d4:	0f 92       	push	r0
+ 1d6:	11 24       	eor	r1, r1
     // WRITE YOUR CODE HERE
 
- 276:	0f 90       	pop	r0
- 278:	0f be       	out	0x3f, r0	; 63
- 27a:	0f 90       	pop	r0
- 27c:	1f 90       	pop	r1
- 27e:	18 95       	reti
+ 1d8:	0f 90       	pop	r0
+ 1da:	0f be       	out	0x3f, r0	; 63
+ 1dc:	0f 90       	pop	r0
+ 1de:	1f 90       	pop	r1
+ 1e0:	18 95       	reti
 
-00000280 <__divmodhi4>:
- 280:	97 fb       	bst	r25, 7
- 282:	07 2e       	mov	r0, r23
- 284:	16 f4       	brtc	.+4      	; 0x28a <__divmodhi4+0xa>
- 286:	00 94       	com	r0
- 288:	07 d0       	rcall	.+14     	; 0x298 <__divmodhi4_neg1>
- 28a:	77 fd       	sbrc	r23, 7
- 28c:	09 d0       	rcall	.+18     	; 0x2a0 <__divmodhi4_neg2>
- 28e:	0e 94 5a 01 	call	0x2b4	; 0x2b4 <__udivmodhi4>
- 292:	07 fc       	sbrc	r0, 7
- 294:	05 d0       	rcall	.+10     	; 0x2a0 <__divmodhi4_neg2>
- 296:	3e f4       	brtc	.+14     	; 0x2a6 <__divmodhi4_exit>
+000001e2 <_exit>:
+ 1e2:	f8 94       	cli
 
-00000298 <__divmodhi4_neg1>:
- 298:	90 95       	com	r25
- 29a:	81 95       	neg	r24
- 29c:	9f 4f       	sbci	r25, 0xFF	; 255
- 29e:	08 95       	ret
-
-000002a0 <__divmodhi4_neg2>:
- 2a0:	70 95       	com	r23
- 2a2:	61 95       	neg	r22
- 2a4:	7f 4f       	sbci	r23, 0xFF	; 255
-
-000002a6 <__divmodhi4_exit>:
- 2a6:	08 95       	ret
-
-000002a8 <__tablejump2__>:
- 2a8:	ee 0f       	add	r30, r30
- 2aa:	ff 1f       	adc	r31, r31
- 2ac:	05 90       	lpm	r0, Z+
- 2ae:	f4 91       	lpm	r31, Z
- 2b0:	e0 2d       	mov	r30, r0
- 2b2:	09 94       	ijmp
-
-000002b4 <__udivmodhi4>:
- 2b4:	aa 1b       	sub	r26, r26
- 2b6:	bb 1b       	sub	r27, r27
- 2b8:	51 e1       	ldi	r21, 0x11	; 17
- 2ba:	07 c0       	rjmp	.+14     	; 0x2ca <__udivmodhi4_ep>
-
-000002bc <__udivmodhi4_loop>:
- 2bc:	aa 1f       	adc	r26, r26
- 2be:	bb 1f       	adc	r27, r27
- 2c0:	a6 17       	cp	r26, r22
- 2c2:	b7 07       	cpc	r27, r23
- 2c4:	10 f0       	brcs	.+4      	; 0x2ca <__udivmodhi4_ep>
- 2c6:	a6 1b       	sub	r26, r22
- 2c8:	b7 0b       	sbc	r27, r23
-
-000002ca <__udivmodhi4_ep>:
- 2ca:	88 1f       	adc	r24, r24
- 2cc:	99 1f       	adc	r25, r25
- 2ce:	5a 95       	dec	r21
- 2d0:	a9 f7       	brne	.-22     	; 0x2bc <__udivmodhi4_loop>
- 2d2:	80 95       	com	r24
- 2d4:	90 95       	com	r25
- 2d6:	bc 01       	movw	r22, r24
- 2d8:	cd 01       	movw	r24, r26
- 2da:	08 95       	ret
-
-000002dc <_exit>:
- 2dc:	f8 94       	cli
-
-000002de <__stop_program>:
- 2de:	ff cf       	rjmp	.-2      	; 0x2de <__stop_program>
+000001e4 <__stop_program>:
+ 1e4:	ff cf       	rjmp	.-2      	; 0x1e4 <__stop_program>

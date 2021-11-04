@@ -26,10 +26,42 @@ int main(void)
 {
     // Configure SSD signals
     SEG_init();
-    int cnt = 0;
+    int cnt = 5;
     // Test of SSD: display number '3' at position 0
-    SEG_update_shift_regs(0b00001101, 0b00100000);
-
+    //SEG_update_shift_regs(0b00001101, 0b00100000);
+    switch (cnt)
+    {
+        case 0:
+        SEG_update_shift_regs(0b00000011, 0b00100000);
+        break;
+        case 1:
+        SEG_update_shift_regs(0b10011111, 0b00100000);
+        break;
+        case 2:
+        SEG_update_shift_regs(0b00100101, 0b00100000);
+        break;
+        case 3:
+        SEG_update_shift_regs(0b00001101, 0b00100000);
+        break;
+        case 4:
+        SEG_update_shift_regs(0b10011001, 0b00100000);
+        break;
+        case 5:
+        SEG_update_shift_regs(0b01001001, 0b00100000);
+        break;
+        case 6:
+        SEG_update_shift_regs(0b01000001, 0b00100000);
+        break;
+        case 7:
+        SEG_update_shift_regs(0b00011111, 0b00100000);
+        break;
+        case 8:
+        SEG_update_shift_regs(0b00000001, 0b00100000);
+        break;
+        case 9:
+        SEG_update_shift_regs(0b00011001, 0b00100000);
+        break;
+    }
     // Configure 16-bit Timer/Counter1 for Decimal counter
     // Set the overflow prescaler to 262 ms and enable interrupt
 
@@ -42,40 +74,7 @@ int main(void)
     {
         /* Empty loop. All subsequent operations are performed exclusively 
          * inside interrupt service routines ISRs */
-        switch (cnt)
-        {
-            case 0:
-                SEG_update_shift_regs(0b00000011, 0b00100000);
-                break;
-            case 1:
-                SEG_update_shift_regs(0b10011111, 0b00100000);
-                break;
-            case 2:
-                SEG_update_shift_regs(0b00100101, 0b00100000);
-                break;
-            case 3:
-                SEG_update_shift_regs(0b00001101, 0b00100000);
-                break;
-            case 4:
-                SEG_update_shift_regs(0b10011001, 0b00100000);
-                break;
-            case 5:
-                SEG_update_shift_regs(0b01001001, 0b00100000);
-                break;
-            case 6:
-                SEG_update_shift_regs(0b01000001, 0b00100000);
-                break;
-            case 7:
-                SEG_update_shift_regs(0b00011111, 0b00100000);
-                break;
-            case 8:
-                SEG_update_shift_regs(0b00000001, 0b00100000);
-                break;
-            case 9:
-                SEG_update_shift_regs(0b00011001, 0b00100000);
-                break;
-        }
-        cnt = (cnt+1)%10;
+        
     }
 
     // Will never reach this
