@@ -1,21 +1,21 @@
-# Lab 7: YOUR_FIRSTNAME LASTNAME
+# Lab 7: Michaela Ryšavá
 
 Link to this file in your GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+[https://github.com/xrysav25/Digital_electronics_2](https://github.com/xrysav25/Digital_electronics_2)
 
 ### Analog-to-Digital Conversion
 
 1. Complete table with voltage divider, calculated, and measured ADC values for all five push buttons.
 
-   | **Push button** | **PC0[A0] voltage** | **ADC value (calculated)** | **ADC value (measured)** |
+   | **Push button** | **PC0[A0] voltage [V]** | **ADC value (calculated)** | **ADC value (measured)** |
    | :-: | :-: | :-: | :-: |
-   | Right  | 0 | 0 | 366 |
-   | Up     | 0,495 | 101,277 | 366 |
-   | Down   | 1,203 | 246,338 | 366 |
-   | Left   | 1,97 | 403,062 | 474 |
-   | Select | 3,182 | 651,037 | 878 |
-   | none   |       |     | 1023 |
+   | Right  | 0 | 0 | 0 |
+   | Up     | 0,495 | 101,277 | 100 |
+   | Down   | 1,203 | 246,338 | 254 |
+   | Left   | 1,97 | 403,062 | 410 |
+   | Select | 3,182 | 651,037 | 643 |
+   | none   | 5 | 1023 | 1023 |
 
 2. Code listing of ACD interrupt service routine for sending data to the LCD/UART and identification of the pressed button. Always use syntax highlighting and meaningful comments:
 
@@ -32,7 +32,19 @@ ISR(ADC_vect)
     value = ADC;                  // Copy ADC result to 16-bit variable
     itoa(value, lcd_string, 10);  // Convert decimal value to string
 
-    // WRITE YOUR CODE HERE
+    lcd_gotoxy(8, 0);
+    lcd_puts("    ");
+    lcd_gotoxy(8, 0);
+    lcd_puts(lcd_string);
+   
+    itoa(value, lcd_string, 16);
+    lcd_gotoxy(13, 0);
+    lcd_puts("    ");
+    lcd_gotoxy(13, 0);
+    lcd_puts(lcd_string);
+   
+    uart_puts(lcd_string);
+    uart_puts("    ");
 
 }
 ```
@@ -41,11 +53,11 @@ ISR(ADC_vect)
 
 1. (Hand-drawn) picture of UART signal when transmitting three character data `De2` in 4800 7O2 mode (7 data bits, odd parity, 2 stop bits, 4800&nbsp;Bd).
 
-   ![your figure]()
+   ![schema7_1.png](schema7_1.png)
 
 2. Flowchart figure for function `uint8_t get_parity(uint8_t data, uint8_t type)` which calculates a parity bit of input 8-bit `data` according to parameter `type`. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
+   ![schema7_2.png](schema7_2.png)
 
 ### Temperature meter
 
@@ -53,4 +65,5 @@ Consider an application for temperature measurement and display. Use temperature
 
 1. Scheme of temperature meter. The image can be drawn on a computer or by hand. Always name all components and their values.
 
-   ![your figure]()
+   ![schema7_3.png](schema7_3.png)
+   
